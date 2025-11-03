@@ -8,3 +8,34 @@ body {
   bottom: 0;
   width: 100%;
 }
+
+h1 {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 15px 20px;
+    margin: 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Alegreya SC', 'EB Garamond', 'serif';
+    font-size: 28px;
+    color: #333;
+}
+
+
+h3 {
+   font-family: 'Helvetica Neue', 'Arial', 'sans-serif';
+}
+
+p {
+    font-family: 'Helvetica Neue', 'Arial', 'sans-serif';
+}
+
+.custom-popup .mapboxgl-popup-content {
+        background-color: rgba(255, 255, 255, 0.9); 
+        border-radius: 8px;
+        font-size: 14px;
+        padding: 7.5px 15px;
+    }
