@@ -27,6 +27,27 @@ const map = new mapboxgl.Map({
         }
     });
 
+    // add geocoder control
+        const geocoder = new MapboxGeocoder({
+        accessToken: mapboxgl.accessToken,
+        mapboxgl: mapboxgl,
+        placeholder: 'Search places in Berkeley',
+        marker: true,  
+        collapsed: false,  // false keeps the input expanded
+        bbox: [-122.30937, 37.84214, -122.23715, 37.89838], // boundary for Berkeley
+        proximity: {
+            longitude: -122.25948,
+            latitude: 37.87221
+        } // coordinates of UC Berkeley   
+    
+    });
+     
+
+    map.addControl(geocoder, 'top-left');
+        geocoder.on('result', (event) => {
+        map.getSource('single-point').setData(event.result.geometry);
+    });
+
      // change cursor to pointer when hovering over points
     map.on('mouseenter', 'points-layer', () => {
         map.getCanvas().style.cursor = 'pointer';
@@ -69,6 +90,8 @@ const map = new mapboxgl.Map({
 
 
     });
+    
+
 
 
 });
