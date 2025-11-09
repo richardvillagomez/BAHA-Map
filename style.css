@@ -25,11 +25,13 @@ h1 {
 }
 
 
-h3 {
+h3, p{
    font-family: 'Helvetica Neue', 'Arial', 'sans-serif';
 }
 
-p {
+
+
+p1 {
     position: fixed; /*stay visible when scrolling*/
     bottom: 0px;
     left: 50%;

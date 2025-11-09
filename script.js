@@ -44,6 +44,8 @@ const map = new mapboxgl.Map({
       const coordinates = e.features[0].geometry.coordinates.slice();
       const properties = e.features[0].properties;
 
+
+
       // create popup content using data properties
       const popupContent = `
             <div>
@@ -53,8 +55,11 @@ const map = new mapboxgl.Map({
                 <p><strong>Designated:</strong> ${properties.Designated}</p>
                 ${properties.Link ? `<p><a href="${properties.Link}" target="_blank">More Information</a></p>` : ''}
                 ${properties.Notes ? `<p><strong>Notes:</strong> ${properties.Notes}</p>` : ''}
+                
             </div>
         `;
+
+        
 
         // add popup when point is clicked
         new mapboxgl.Popup({ className: 'custom-popup' })
